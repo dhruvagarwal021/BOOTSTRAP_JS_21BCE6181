@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+<body>
+    <button class="btn btn-secondary m-5" onclick="showdate()">Show date</button>
+    <input class="form-control ms-5" type="text" id="dateoutput" style="width: 50%;">
+    <button class="btn btn-secondary m-5" onclick="showtime()">Show Time</button>
+    <input class="form-control ms-5" type="text" id="timeoutput" style="width: 50%;">
+    <script>
+        function showdate()
+        {
+            var monthnames=["January","February","March","April","May","June","July","August","September","October","November","December"];
+            var currentdate=new Date();
+            var day=currentdate.getDate();
+            var month=monthnames[currentdate.getMonth()];
+            var year=currentdate.getFullYear();
+            document.getElementById("dateoutput").value=day+"/"+month+"/"+year;
+        }
+        function showtime()
+        {
+            var currentdate=new Date();
+            
+            const options={
+                hour12:false,
+                timeZoneName:'short',
+                timeZone:'Asia/Kolkata',
+                hour:'2-digit',
+                minute:'2-digit',
+                second:'2-digit',
+            };
+
+            const formatter=new Intl.DateTimeFormat('en-US',options);
+            const formattedTime=formatter.format(currentdate);
+
+
+            var daynames=["Mon","Tue","Wed","Thrus","Fri","Sat","Sun"];
+            var monthnames=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+            var day=currentdate.getDate();
+            var month=monthnames[currentdate.getMonth()];
+            var year=currentdate.getUTCFullYear();
+            document.getElementById("timeoutput").value=daynames[currentdate.getDay()-1]+" "+month+" "+day+" "+year+" "+formattedTime+" (India Standard Time)";
+        }
+    </script>
+</body>
+</html>

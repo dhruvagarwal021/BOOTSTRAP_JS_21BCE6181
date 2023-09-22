@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-5</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+<body>
+    <center>
+        <form>
+            <table>
+                <tr>
+                    <td><label class="form-label mt-5">Name:</label></td>
+                    <td><input id="name" class="form-control mt-5 ms-2" type="text"></td>
+                    <td><span id="name-empty" style="color: red; font-size: 20px; position: relative; left: 20px; top: 20px;"></span></td>
+                </tr>
+                <tr>
+                    <td><label class="form-label mt-5">Email:</label></td>
+                    <td><input id="email" class="form-control mt-5 ms-2" type="email"></td>
+                    <td><span id="email-empty" style="color: red; font-size: 20px; position: relative; left: 20px; top: 20px;"></span></td>
+                </tr>
+                <tr>
+                    <td><label class="form-label mt-5">Website:</label></td>
+                    <td><input id="website" class="form-control mt-5 ms-2" type="text"></td>
+                    <td><span id="website-empty" style="color: red; font-size: 20px; position: relative; left: 20px; top: 20px;"></span></td>
+                </tr>
+                <tr>
+                    <td><label class="form-label">Message:</label></td>
+                    <td><textarea id="message" class="form-control mt-5 ms-2" cols="30" rows="5"></textarea></td>
+                    <td><span id="message-empty" style="color: red; font-size: 20px; position: relative; left: 20px; top: 20px;"></span></td>
+                </tr>
+                <tr>
+                    <td><button class="btn btn-outline-dark" style="position: relative; left:87px; top: 20px;" type="button" onclick="display()">Submit</button></center></td>
+                </tr>
+            </table>
+        </form>
+    </center>
+    <script>
+        function display()
+        {
+            var name=document.getElementById("name").value;
+            var email=document.getElementById("email").value;
+            var website=document.getElementById("website").value;
+            var message=document.getElementById("message").value;
+
+            if(name == '')
+            {
+                document.getElementById("name-empty").innerText="The field is required";
+                document.getElementById("name").style.border="2px solid red";
+            }
+            if(email == '')
+            {
+                document.getElementById("email-empty").innerText="A valid email address is required";
+                document.getElementById("email").style.border="2px solid red";
+            }
+            if(website == '')
+            {
+                document.getElementById("website-empty").innerText="A valid url is required";
+                document.getElementById("website").style.border="2px solid red";
+            }
+            if(message == '')
+            {
+                document.getElementById("message-empty").innerText="The field is required";
+                document.getElementById("message").style.border="2px solid red";
+            }
+        }
+    </script>
+</body>
+</html>

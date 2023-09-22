@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-2</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+<body>
+    <label class="form-label">Enter string : </label>
+    <input class="form-control mb-3" type="text" id="input" style="width: 30%;">
+    <label class="form-label">Output string :</label>
+    <input class="form-control mb-3" type="text" id="output" style="width: 30%;">
+    <button class="btn btn-primary" onclick="shuffle()">Shuffle</button>
+    <button class="btn btn-danger" onclick="reset()">Reset</button>
+
+    <script>
+        function shuffle()
+        {
+            var input=document.getElementById("input").value;
+
+            let arr=new Array(123).fill(0);
+
+            for(let i=0;i<input.length;i++)
+            {
+                arr[input.charCodeAt(i)]++;
+            }
+
+            let finarr=[];
+
+            for(let i=0;i<123;i++)
+            {
+                for(let j=0;j<arr[i];j++)
+                {
+                    finarr.push(String.fromCharCode(i));
+                }
+            }
+            var output=finarr.join('');
+            document.getElementById("output").value=output;
+        }
+
+        function reset()
+        {
+            document.getElementById("input").value="";
+            document.getElementById("output").value="";
+        }
+    </script>
+</body>
+</html>

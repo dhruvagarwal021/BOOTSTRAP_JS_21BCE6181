@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-3</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+<body>
+    <label class="form-label mt-2 ms-2">1st Num :</label>
+    <input id="num1" type="number" class="form-control ms-2" style="width: 30%;">
+    <label class="form-label mt-2 ms-2">2nd Num :</label>
+    <input id="num2" type="number" class="form-control ms-2" style="width: 30%;">
+    <button class="btn btn-danger mt-2 ms-2" onclick="Multiply()">Multiply</button>
+    <button class="btn btn-danger mt-2 ms-2" onclick="Divide()">Divide</button>
+    <br>
+    <button class="btn btn-primary mt-2 ms-2 mb-2" onclick="clearAll()">Clear</button>
+    <br>
+    <textarea class="form-control ms-2" id="output" cols="" rows="5" style="width: 30%;"></textarea>
+
+    <script>
+        function Multiply()
+        {
+            var num1=document.getElementById("num1").value;
+            var num2=document.getElementById("num2").value;
+            var ans=num1*num2;
+            document.getElementById("output").innerText="The result is : "+ans;
+        }
+        function Divide()
+        {
+            var num1=document.getElementById("num1").value;
+            var num2=document.getElementById("num2").value;
+            var ans=num1/num2;
+            ans=parseFloat(ans.toFixed(2));
+            document.getElementById("output").innerText="The result is : "+ans;
+        }
+        function clearAll()
+        {
+            document.getElementById("num1").value="";
+            document.getElementById("num2").value="";
+            document.getElementById("output").innerHTML="";
+        }
+    </script>
+</body>
+</html>
