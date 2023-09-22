@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+<body>
+    <center>
+        <form class="form text-start m-5" style="max-width: 40%; background-color: rgb(237, 237, 237);">
+            <table>
+                <tr>
+                    <tr><label class="form-label mt-4 mx-5">Name</label></tr>
+                    <tr><input id="name" type="text" class="form-control mx-5" style="width: 83%;" required></tr>
+                    <span class="ms-5" id="name-error" style="color: red; font-size: 12px;"></span>
+                </tr>
+                <br>
+                <tr>
+                    <tr><label class="form-label mt-4 mx-5">Email</label></tr>
+                    <tr><input id="email" type="email" class="form-control mx-5" style="width: 83%;" required></tr>
+                    <span class="ms-5" id="email-error" style="color: red; font-size: 12px;"></span>
+                </tr>
+                <br>
+                <tr>
+                    <tr><label class="form-label mt-4 mx-5">Password</label></tr>
+                    <tr><input id="password" type="password" class="form-control mx-5" style="width: 83%;" required></tr>
+                    <span class="ms-5" id="password-error" style="color: red; font-size: 12px;"></span>
+                </tr>
+                <br>
+                <tr>
+                    <tr><label class="form-label mt-4 mx-5">Hobbies</label></tr>
+                    <tr><select class="form-select mx-5" style="width: 83%;">
+                        <option selected disabled>Select your hobbie</option>
+                        <option value="">Sports</option>
+                        <option value="">Reading</option>
+                        <option value="">Dancing</option>
+                    </select></tr>
+                </tr>
+                <tr>
+                    <tr>
+                        <button class="btn btn-danger mt-3 mx-5 mb-2" type="submit" style="width: 83%;" onclick="display()">Submit</button>
+                    </tr>
+                </tr>
+            </table>
+        </form>
+    </center>
+
+    <script>
+        function display()
+        {
+           var name=document.getElementById("name").value;
+           var email=document.getElementById("email").value;
+           var password=document.getElementById("password").value;
+           if(name == '')
+           {
+            document.getElementById("name-error").innerText="Name is required";
+            document.getElementById("name").style.borderColor="red";
+           }
+           if(email == '')
+           {
+            document.getElementById("email-error").innerText="Email is required";
+            document.getElementById("email").style.borderColor="red";
+           }
+           if(password == '')
+           {
+            document.getElementById("password-error").innerText="Password is required";
+            document.getElementById("password").style.borderColor="red";
+           }
+        }
+    </script>
+</body>
+</html>
