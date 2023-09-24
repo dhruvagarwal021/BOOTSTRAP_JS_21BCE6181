@@ -1,23 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
+
 <body>
     <main>
         <center>
-            <form class="form">
-                <table>
+            <form class="form mt-5" style="width: 40%; background-color: rgb(223, 222, 222);">
+                <table style="font-weight: bold;">
                     <tr>
-                        <td><label class="form-label">First Name</label></td>
-                        <td><input class="form-control my-3" type="text"></td>
+                        <td><label class="form-label" style="text-indent: 50px;" id="flabel">First Name</label></td>
+                        <td>
+                            <div id="fdiv" class="ms-3 my-3" style="position: relative; width: 376px; height: 34.5px; background-color:rgb(223, 222, 222); border: 0.1px solid rgb(117, 116, 116); border-top-left-radius: 5px; border-bottom-left-radius: 5px;">
+                                <i id="ficon" class="fa-solid fa-person" style="font-size: 25px; position: absolute; top:3.5px; left: 8px; background-color:  rgb(223, 222, 222); color: rgb(74, 73, 73);"></i>
+                                <input id="fname" style="width: 345px; height: 33px; margin-left: 30px;" type="text" placeholder="First Name">
+                                <span id="fname-empty" style="color: red; width: 345px;"></span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label id="llabel" class="form-label" style="text-indent: 50px;">Last Name</label></td>
+                        <td>
+                            <div id="ldiv" class="ms-3 my-3" style="position: relative; width: 376px; height: 34.5px; background-color:rgb(223, 222, 222); border: 0.1px solid rgb(117, 116, 116); border-top-left-radius: 5px; border-bottom-left-radius: 5px;">
+                                <i id="licon" class="fa-solid fa-person" style="font-size: 25px; position: absolute; top:3.5px; left: 8px; background-color:  rgb(223, 222, 222); color: rgb(74, 73, 73);"></i>
+                                <input id="lname" style="width: 345px; height: 33px; margin-left: 30px;" type="text" placeholder="Last Name">
+                                <span id="lname-empty" style="color: red; width: 345px; display: block;"></span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label id="elabel" class="form-label" style="text-indent: 80px;">E-Mail</label></td>
+                        <td>
+                            <div id="ediv" class="ms-3 my-3" style="position: relative; width: 376px; height: 34.5px; background-color:rgb(223, 222, 222); border: 0.1px solid rgb(117, 116, 116); border-top-left-radius: 5px; border-bottom-left-radius: 5px;">
+                                <i id="eicon" class="fa-regular fa-envelope" style="font-size: 19px; position: absolute; top:5.7px; left: 6px; background-color:  rgb(223, 222, 222); color: rgb(74, 73, 73);"></i>
+                                <input id="email" style="width: 345px; height: 33px; margin-left: 30px;" type="email" placeholder="E-Mail Address">
+                                <span id="email-empty" style="color: red; width: 345px; display: block;"></span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label id="plabel" class="form-label" style="text-indent: 70px;">Phone#</label></td>
+                        <td>
+                            <div id="pdiv" class="ms-3 my-3" style="position: relative; width: 376px; height: 34.5px; background-color:rgb(223, 222, 222); border: 0.1px solid rgb(117, 116, 116); border-top-left-radius: 5px; border-bottom-left-radius: 5px;">
+                                <i id="picon" class="fa-solid fa-phone" style="font-size: 17px; position: absolute; top:7px; left: 6px; background-color:  rgb(223, 222, 222); color: rgb(74, 73, 73);"></i>
+                                <input id="phone" style="width: 345px; height: 33px; margin-left: 30px;" type="text" placeholder="(845)555-1212">
+                                <span id="phone-empty" style="color: red; width: 345px; display: block;"></span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label id="alabel" class="form-label" style="text-indent: 70px;">Address</label></td>
+                        <td>
+                            <div id="adiv" class="ms-3 my-3" style="position: relative; width: 376px; height: 34.5px; background-color:rgb(223, 222, 222); border: 0.1px solid rgb(117, 116, 116); border-top-left-radius: 5px; border-bottom-left-radius: 5px;">
+                                <i id="aicon" class="fa-solid fa-house" style="font-size: 15px; position: absolute; top:8px; left: 6.5px; background-color:  rgb(223, 222, 222); color: rgb(74, 73, 73);"></i>
+                                <input id="address" style="width: 345px; height: 33px; margin-left: 30px;" type="text" placeholder="Address">
+                                <span id="address-empty" style="color: red; width: 345px; display: block;"></span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label id="clabel" class="form-label" style="text-indent: 100px;">City</label></td>
+                        <td>
+                            <div id="cdiv" class="ms-3 my-3" style="position: relative; width: 376px; height: 34.5px; background-color:rgb(223, 222, 222); border: 0.1px solid rgb(117, 116, 116); border-top-left-radius: 5px; border-bottom-left-radius: 5px;">
+                                <i id="cicon" class="fa-solid fa-house" style="font-size: 15px; position: absolute; top:8px; left: 6.5px; background-color:  rgb(223, 222, 222); color: rgb(74, 73, 73);"></i>
+                                <input id="city" style="width: 345px; height: 33px; margin-left: 30px;" type="text" placeholder="City">
+                                <span id="city-empty" style="color: red; width: 345px; display: block;"></span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label id="slabel" class="form-label" style="text-indent: 90px;">State</label></td>
+                        <td>
+                            <div id="sdiv" class="ms-3 my-3" style="position: relative; width: 376px; height: 34.5px; background-color:rgb(223, 222, 222); border: 0.1px solid rgb(117, 116, 116); border-top-left-radius: 5px; border-bottom-left-radius: 5px;">
+                                <i id="sicon" class="fa-solid fa-bars" style="font-size: 17px; position: absolute; top:8px; left: 7.5px; background-color:  rgb(223, 222, 222); color: rgb(74, 73, 73);"></i>
+                                <select id="state" class="form-select" style="width: 345px; height: 33px; margin-left: 30px; border-radius: 0px;">
+                                    <option value="" selected disabled>Please select your state</option>
+                                    <option value="arunachal">Arunachal Pradesh</option>
+                                    <option value="chattisgarh">Chhatisgarh</option>
+                                    <option value="delhi">Delhi</option>
+                                    <option value="gujrat">Gujrat</option>
+                                </select>
+                                <span id="state-empty" style="color: red; width: 345px; display: block;"></span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label id="hlabel" class="form-label" style="text-indent: -40px; position: relative; left: 30px;">Do you have hosting ?</label></td>
+                        <td>
+                            <label id="ylabel" class="my-3 ms-5" for="yes">Yes</label><input type="radio" name="yes" id="yes">
+                            <br>
+                            <label id="nlabel" class="ms-5" for="no">No</label><input type="radio" name="no" id="no">
+                            <span id="hosting-empty" style="color: red; width: 345px; margin-left: 16.5px; display: block;"></span>
+                        </td>         
+                    </tr>
+                    <tr>
+                        <td><label id="prolabel" class="form-label" style="text-indent: -10px;">Project Description</label></td>
+                        <td>
+                            <div id="prodiv" class="ms-3 my-3" style="position: relative; width: 376px; height: 50px; background-color:rgb(223, 222, 222); border: 0.1px solid rgb(117, 116, 116); border-top-left-radius: 5px; border-bottom-left-radius: 5px;">
+                                <i id="proicon" class="fa-solid fa-pen" style="font-size: 20.5px; position: absolute; top:14.3px; left: 8px; background-color:  rgb(223, 222, 222); color: rgb(74, 73, 73);"></i>
+                                <textarea id="project" class="form-control" style="width: 340px; height: 49px; margin-left: 35px; border-radius: 0px;" cols="30" rows="5" placeholder="Project Description"></textarea>
+                                <span id="project-empty" style="color: red; width: 345px; display: block;"></span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><Button class="btn mb-2" style="background-color: orange; color: white; position: relative; left:220px" onclick="display()">
+                            Send  
+                            <i class="ms-1 fa-solid fa-paper-plane"></i>
+                            </Button>
+                        </td>
                     </tr>
                 </table>
             </form>
         </center>
     </main>
+    <script>
+        function display()
+        {
+            event.preventDefault();
+            var fname=document.getElementById("fname").value;
+            if(fname == '')
+            {
+                document.getElementById("flabel").style.color="red";
+                document.getElementById("fdiv").style.borderColor="red";
+                document.getElementById("ficon").style.color="red";
+                document.getElementById("fname-empty").innerText="Please supply your first name";
+            }
+            var lname=document.getElementById("lname").value;
+            if(lname == '')
+            {
+                document.getElementById("llabel").style.color="red";
+                document.getElementById("ldiv").style.borderColor="red";
+                document.getElementById("licon").style.color="red";
+                document.getElementById("lname-empty").innerText="Please supply your last name";
+            }
+            var email=document.getElementById("email").value;
+            if(email == '')
+            {
+                document.getElementById("elabel").style.color="red";
+                document.getElementById("ediv").style.borderColor="red";
+                document.getElementById("eicon").style.color="red";
+                document.getElementById("email-empty").innerText="Please supply your email address";
+            }
+            var phone=document.getElementById("phone").value;
+            if(phone == '')
+            {
+                document.getElementById("plabel").style.color="red";
+                document.getElementById("pdiv").style.borderColor="red";
+                document.getElementById("picon").style.color="red";
+                document.getElementById("phone-empty").innerText="Please supply your phone number";
+            }
+            var address=document.getElementById("address").value;
+            if(address == '')
+            {
+                document.getElementById("alabel").style.color="red";
+                document.getElementById("adiv").style.borderColor="red";
+                document.getElementById("aicon").style.color="red";
+                document.getElementById("address-empty").innerText="Please supply your street address";
+            }
+            var city=document.getElementById("city").value;
+            if(city == '')
+            {
+                document.getElementById("clabel").style.color="red";
+                document.getElementById("cdiv").style.borderColor="red";
+                document.getElementById("cicon").style.color="red";
+                document.getElementById("city-empty").innerText="Please supply your city";
+            }
+            var state=document.getElementById("state").value;
+            if(state == '')
+            {
+                document.getElementById("slabel").style.color="red";
+                document.getElementById("sdiv").style.borderColor="red";
+                document.getElementById("sicon").style.color="red";
+                document.getElementById("state-empty").innerText="Please select your state";
+            }
+            var hyes=document.getElementById("yes").checked;
+            var hno=document.getElementById("no").checked;
+            if(!hyes && !hno)
+            {
+                document.getElementById("hlabel").style.color="red";
+                document.getElementById("ylabel").style.color="red";
+                document.getElementById("nlabel").style.color="red";
+                document.getElementById("hosting-empty").innerText="Please select either yes or no";
+            }
+            var project=document.getElementById("project").value;
+            if(project == '')
+            {
+                document.getElementById("prolabel").style.color="red";
+                document.getElementById("prodiv").style.borderColor="red";
+                document.getElementById("proicon").style.color="red";
+                document.getElementById("project-empty").innerText="Please describe your project !";
+            }
+        }
+    </script>
 </body>
+
 </html>
