@@ -38,12 +38,12 @@
             const formattedTime=formatter.format(currentdate);
 
 
-            var daynames=["Mon","Tue","Wed","Thrus","Fri","Sat","Sun"];
+            var daynames=["Sun","Mon","Tue","Wed","Thrus","Fri","Sat"];
             var monthnames=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
             var day=currentdate.getDate();
             var month=monthnames[currentdate.getMonth()];
             var year=currentdate.getUTCFullYear();
-            document.getElementById("timeoutput").value=daynames[currentdate.getDay()-1]+" "+month+" "+day+" "+year+" "+formattedTime+" (India Standard Time)";
+            document.getElementById("timeoutput").value=daynames[currentdate.getDay()]+" "+month+" "+day+" "+year+" "+formattedTime+" (India Standard Time)";
         }
     </script>
 </body>
