@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moving Train</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+
+<body>
+    <img class="m-5" id="train" src="./img.png" alt="Train"
+        style="position: absolute; left: 0; top: 100px; width: 350px; height: 300px;">
+    <button class="btn btn-primary m-5" style="transform: translate(1000%,1100%);" onclick="startTrain()">Start</button>
+    <button class="btn btn-danger m-3" style="transform: translate(1000%,1100%);" onclick="stopTrain()">Stop</button>
+    <script>
+        const train = document.getElementById("train");
+        let position = 0;
+        let isMoving = false;
+
+        function moveTrain() {
+            if (isMoving) {
+                position += 9;
+                train.style.left = position + "px";
+                const screenWidth = window.innerWidth;
+                const trainWidth = train.offsetWidth;
+
+                if (position + trainWidth > screenWidth) {
+                    position = -trainWidth;
+                }
+            }
+        }
+
+        function startTrain() {
+            isMoving = true;
+        }
+
+        function stopTrain() {
+            isMoving = false;
+        }
+        setInterval(moveTrain, 50);
+    </script>
+</body>
+
+</html>

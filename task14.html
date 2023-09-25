@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+
+<body>
+    <main>
+        <center>
+            <form class="form mt-5" style="width: 800px; height:770px; background-color: rgb(249, 184, 249);"
+                onsubmit="verification()">
+                <p class="h2" style="position: relative; top:25px; color: blue;">Registration form</p>
+                <table>
+                    <tr>
+                        <td><label class="mt-5"
+                                style="text-indent: 54px; font-weight: bold; font-family: 'Times New Roman', Times, serif;">First
+                                Name</label></td>
+                        <td><input id="fname" class="form-control mt-5 ms-3" type="text"
+                                style="height: 20px; width: 450px; border: 1px solid rgb(165, 165, 165); border-radius: 2px;">
+                        </td>
+                        <td><span id="fname-msg" style="color: red; position: relative; top:22px; left: 10px;"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label class="mt-2"
+                                style="text-indent: 56px; font-weight: bold; font-family: 'Times New Roman', Times, serif;">Last
+                                Name</label></td>
+                        <td><input id="lname" class="form-control mt-2 ms-3" type="text"
+                                style="height: 20px; width: 450px; border: 1px solid rgb(165, 165, 165); border-radius: 2px;">
+                        </td>
+                        <td><span id="lname-msg" style="color: red; position: relative; top:3px; left: 10px;"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label class="mt-2"
+                                style="text-indent: 88px; font-weight: bold; font-family: 'Times New Roman', Times, serif;">Email</label>
+                        </td>
+                        <td><input id="email" class="form-control mt-2 ms-3" type="email"
+                                style="height: 20px; width: 450px; border: 1px solid rgb(165, 165, 165); border-radius: 2px;">
+                        </td>
+                        <td><span id="email-msg" style="color: red; position: relative; top:3px; left: 10px;"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label class="mt-2"
+                                style="text-indent: 64px; font-weight: bold; font-family: 'Times New Roman', Times, serif;">Password</label>
+                        </td>
+                        <td><input id="password" class="form-control mt-2 ms-3" type="password"
+                                style="height: 20px; width: 450px; border: 1px solid rgb(165, 165, 165); border-radius: 2px;">
+                        </td>
+                        <td><span id="password-msg" style="color: red; position: relative; top:3px; left: 10px;"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label class="mt-2"
+                                style="font-weight: bold; font-family: 'Times New Roman', Times, serif;">Re-enter
+                                Password</label></td>
+                        <td><input id="repassword" class="form-control mt-2 ms-3" type="password"
+                                style="height: 20px; width: 450px; border: 1px solid rgb(165, 165, 165); border-radius: 2px;">
+                        </td>
+                        <td><span id="repassword-msg"
+                                style="color: red; position: relative; top:3px; left: 10px;"></span></td>
+                    </tr>
+                    <tr rowspan="2">
+                        <td><label class="mt-2"
+                                style="text-indent: 77.5px; font-weight: bold; font-family: 'Times New Roman', Times, serif;">Gender</label>
+                        </td>
+                        <td>
+                            <div class="mt-2 ms-3" style="display: block; width: 80px; height: 50px;">
+                                <input id="male" type="radio"><label class="ms-2" for="male">Male</label>
+                                <br>
+                                <input id="female" type="radio"><label class="mt-1 ms-2" for="female">Female</label>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label class="mt-2"
+                                style="text-indent: 103px; font-weight: bold; font-family: 'Times New Roman', Times, serif;">Age</label>
+                        </td>
+                        <td><input id="age" class="form-control mt-2 ms-3" type="number"
+                                style="height: 20px; width: 450px; border: 1px solid rgb(165, 165, 165); border-radius: 2px;">
+                        </td>
+                        <td><span id="age-msg" style="color: red; position: relative; top:3px; left: 10px;"></span></td>
+                    </tr>
+                    <tr>
+                        <td><label class="mt-2"
+                                style="text-indent: 27px; font-weight: bold; font-family: 'Times New Roman', Times, serif;">Phone
+                                Number</label></td>
+                        <td><input id="phno" class="form-control mt-2 ms-3" type="text"
+                                style="height: 20px; width: 450px; border: 1px solid rgb(165, 165, 165); border-radius: 2px;">
+                        </td>
+                        <td><span id="phno-msg" style="color: red; position: relative; top:3px; left: 10px;"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label class="mt-2"
+                                style="text-indent: 74px; font-weight: bold; font-family: 'Times New Roman', Times, serif;">Address</label>
+                        </td>
+                        <td><textarea id="addr" class="form-control mt-2 ms-3"
+                                style="width: 450px; border: 1px solid rgb(165, 165, 165); border-radius: 2px;"
+                                name="address" id="address" rows="4"></textarea></td>
+                        <td><span id="addr-msg" style="color: red; position: relative; top:3px; left: 10px;"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label class="mt-2"
+                                style="text-indent: 96px; font-weight: bold; font-family: 'Times New Roman', Times, serif;">State</label>
+                        </td>
+                        <td><input id="state" class="form-control mt-2 ms-3" type="text"
+                                style="height: 20px; width: 450px; border: 1px solid rgb(165, 165, 165); border-radius: 2px;">
+                        </td>
+                        <td><span id="state-msg" style="color: red; position: relative; top:3px; left: 10px;"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label class="mt-2"
+                                style="text-indent: 73px; font-weight: bold; font-family: 'Times New Roman', Times, serif;">Country</label>
+                        </td>
+                        <td><select id="country" class="mt-2 ms-3" style="height: 20px; width: 200px;" name="country" id="country">
+                                <option value="" selected disabled>Choose your country</option>
+                                <option value="bharat">Bharat</option>
+                                <option value="us">United States</option>
+                                <option value="rus">Russia</option>
+                                <option value="isr">Israeil</option>
+                            </select></td>
+                        <td><span id="country-msg" style="color: red; position: relative; top:3px; left: 10px;"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label class="mt-2"
+                                style="text-indent: 7px; font-weight: bold; font-family: 'Times New Roman', Times, serif;">Languages
+                                known</label></td>
+                        <td>
+                            <div class="ms-3">
+                                <input id="en" type="checkbox" name="eng" id="eng"><label class="ms-1" for="eng">English</label>
+                                <input id="kn" class="ms-2" type="checkbox" name="kan" id="kan"><label class="ms-1"
+                                    for="kan">Kannada</label>
+                                <input id="hn" class="ms-2" type="checkbox" name="hin" id="hin"><label class="ms-1"
+                                    for="hin">Hindi</label>
+                                <input id="tl" class="ms-2" type="checkbox" name="tel" id="tel"><label class="ms-1"
+                                    for="tel">Telgu</label>
+                            </div>
+                        </td>
+                        <td><span id="lang-msg" style="color: red; position: relative; top:3px; left: 10px;"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <div class="mt-2 ms-1">
+                                <input id="declaration" type="checkbox" name="verified" id="verified">
+                                <label for="">Hereby I declare that all the given details are true</label>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <p style="text-align: end;">Login to <a href="https://ethnus.com" style="color: purple;">Ethnus</a> website
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button class="btn btn-danger mt-2"
+                                style="width: 130px; position: relative; top:2px; left: 245px; border-radius: 20px;"
+                                type="submit">Register</button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </center>
+    </main>
+    <script>
+        function check() {
+            event.preventDefault();
+
+            var fname = document.getElementById("fname").value;
+
+            if (fname == '') {
+                document.getElementById("fname-msg").innerText = "POOR";
+            }
+
+            var lname = document.getElementById("lname").value;
+
+            if (lname == '') {
+
+                document.getElementById("lname-msg").innerText = "POOR";
+            }
+
+            var email = document.getElementById("email").value;
+
+            if (email == '') {
+                document.getElementById("email-msg").innerText = "POOR";
+            }
+
+            var password = document.getElementById("password").value;
+
+            if (password == '') {
+                document.getElementById("password-msg").innerText = "POOR";
+            }
+
+            var repassword = document.getElementById("repassword").value;
+
+            if (repassword == '') {
+                document.getElementById("repassword-msg").innerText = "POOR OR MISMATCH";
+            }
+
+            var male = document.getElementById("male");
+            var female = document.getElementById("female");
+
+            if(male.checked && female.checked)
+            {
+                alert("Please select only one !");
+                male.checked=false;
+                female.checked=false;
+            }
+
+            var age = document.getElementById("age").value;
+
+            if (age == '') {
+                document.getElementById("age-msg").innerText = "POOR";
+            }
+
+            var phno = document.getElementById("phno").value;
+
+            if (phno == '') {
+                document.getElementById("phno-msg").innerText = "POOR";
+            }
+
+            var addr = document.getElementById("addr").value;
+
+            if (addr == '') {
+                document.getElementById("addr-msg").innerText = "POOR";
+            }
+
+            var state = document.getElementById("state").value;
+
+            if (state == '') {
+                document.getElementById("state-msg").innerText = "POOR";
+            }
+
+            var country = document.getElementById("country").value;
+
+            if (country == '') {
+                document.getElementById("country-msg").innerText = "POOR";
+            }
+
+            if(fname!='' && lname!=='' && email!='' && password!='' && repassword!='' && age!='' && phno!='' && addr!='' && state!='' && country!='')
+            {
+                return true;
+            }
+            return false;
+        }
+
+        function valid()
+        {
+            if(check())
+            {
+                var en=document.getElementById("en").checked;
+                var kn=document.getElementById("kn").checked;
+                var hn=document.getElementById("hn").checked;
+                var tl=document.getElementById("tl").checked;
+
+                if(!en && !kn && !hn && !tl)
+                {
+                    alert("Please select your language !");
+                    return false;
+                }
+                return true;
+            }
+        }
+
+        function verification()
+        {
+            if(valid())
+            {
+                var declared=document.getElementById("declaration").checked;
+
+                if(!declared)
+                {
+                    alert("Please verify the details you entered !");
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
